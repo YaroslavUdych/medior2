@@ -20,6 +20,14 @@ Yaroslav Udych
 -  Integrated `UserList` into the `Home` page with `users` as props
 -  Fetched user list from external API (`usersUrl`) using SSR
 -  Connected `page` component to load users and render `Home` with data
+-  Created universal `Card` component for wrapping content
+-  Updated `UserCard` to use `Card` and added support for selecting author via `onClick`
+-  Updated `Link`component and add `onClick` prop
+-  Defined `IArticle` interface to type article
+-  Created `AuthorContext` to provide and update selected author globally
+-  Created `ArticleListContainer`, `ArticleList` and `ArticleCard` components for rendering article data
+-  Created `api.ts` utility module to fetch users and articles from API
+-  Implemented dynamic article page with server-side fetching of user and articles by `userId`
 
 ## [0.3.0] - 2025-06-21
 
