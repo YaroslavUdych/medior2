@@ -1,17 +1,23 @@
+'use client';
+
 import { ReactElement } from 'react';
 import clsx from 'clsx';
+import Card from '@/components/Card/Card';
+import { useAuthor } from '@/context/AuthorContext';
 import IUser from '@/types/User';
 import Link from '@/ui/Link/Link';
 import styles from './UserCard.module.css';
 
 const UserCard = (user: IUser): ReactElement => {
+  const { setAuthor } = useAuthor();
+
   const lat = user.address.geo.lat;
   const lng = user.address.geo.lng;
 
   const mapUrl = `https://mapy.cz/turisticka?source=coor&id=${lng}%2C${lat}&x=${lng}&y=${lat}&z=16`;
 
   return (
-    <div className={styles.card}>
+    <Card>
       <h2 className={styles.name}>{user.name}</h2>
 
       <span className={clsx(styles.subtitle, styles.bigMarginBottom)}>
@@ -73,11 +79,12 @@ const UserCard = (user: IUser): ReactElement => {
           href={{
             pathname: `/articles/${user.id}`,
           }}
+          onClick={(): void => setAuthor(user.name)}
         >
           Read articles
         </Link>
       </div>
-    </div>
+    </Card>
   );
 };
 
