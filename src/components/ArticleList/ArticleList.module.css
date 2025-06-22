@@ -1,0 +1,15 @@
+.container {
+  @apply py-6;
+}
+
+.title {
+  @apply text-xxl font-bold mb-6 tracking-wide;
+}
+
+.authorName {
+  @apply text-sm text-gray mb-6 flex items-center gap-10;
+}
+
+.articleList {
+  @apply grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(385px,1fr))];
+}
