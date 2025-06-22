@@ -1,0 +1,7 @@
+.title {
+  @apply text-xxl font-bold mb-4 tracking-wide;
+}
+
+.list {
+  @apply grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(385px,1fr))];
+}
