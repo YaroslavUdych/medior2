@@ -1,0 +1,15 @@
+.button {
+  @apply text-base text-blue border border-blue px-4 py-2 rounded-md font-semibold tracking-wider;
+
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.text {
+  @apply text-blue text-base font-semibold tracking-wide;
+
+  display: inline-block;
+  text-decoration: none;
+}
