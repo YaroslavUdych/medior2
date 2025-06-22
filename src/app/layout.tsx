@@ -1,9 +1,10 @@
 import { ReactElement } from 'react';
 import { Metadata } from 'next';
 import '@/styles/index.scss';
+import { AuthorProvider } from '@/context/AuthorContext';
 
 interface IProps {
-  children: ReactElement
+  children: ReactElement;
 }
 
 export const metadata: Metadata = {
@@ -13,12 +14,10 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({
-  children,
-}: IProps): ReactElement => (
+const RootLayout = ({ children }: IProps): ReactElement => (
   <html lang="en">
     <body className="page-layout">
-      {children}
+      <AuthorProvider>{children}</AuthorProvider>
     </body>
   </html>
 );
