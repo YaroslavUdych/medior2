@@ -6,12 +6,14 @@ import styles from './Link.module.css';
 interface ILinkProps {
   href: string | UrlObject;
   children: ReactNode;
+  onClick?: () => void;
   isExternal?: boolean;
 }
 
 const Link = ({
   href,
   children,
+  onClick,
   isExternal = false,
 }: ILinkProps): ReactElement => {
   if (isExternal) {
@@ -28,7 +30,7 @@ const Link = ({
   }
 
   return (
-    <NextLink href={href} className={styles.button}>
+    <NextLink href={href} onClick={onClick} className={styles.button}>
       {children}
     </NextLink>
   );
