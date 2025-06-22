@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-import Card from '@/components/Card/Card';
 import IArticle from '@/types/Article';
+import Card from '@/ui/Card/Card';
 import styles from './ArticleCard.module.css';
 
 const ArticleCard = (article: IArticle): ReactElement => {

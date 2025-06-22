@@ -2,9 +2,9 @@
 
 import { ReactElement } from 'react';
 import clsx from 'clsx';
-import Card from '@/components/Card/Card';
 import { useAuthor } from '@/context/AuthorContext';
 import IUser from '@/types/User';
+import Card from '@/ui/Card/Card';
 import Link from '@/ui/Link/Link';
 import styles from './UserCard.module.css';
 
